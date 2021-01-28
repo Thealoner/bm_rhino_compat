@@ -2,7 +2,7 @@
 var server = require('server');
 
 server.get('Show', function (req, res, next) {
-    var testRhino = require('*/cartridge/scripts/kangax/testRhino');
+    var testRhino = require('*/cartridge/scripts/rhino/testRhino');
 
     var testResults = testRhino.getTestResults();
 
