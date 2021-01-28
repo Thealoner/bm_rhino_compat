@@ -15,6 +15,12 @@ Unlike those projects bm_rhino_compat can be used solely to test the ECMAScript 
 
 Try switching the code version compatibility to see the difference.
 
+## Screenshots
+
+![screenshot_1](/screenshots/screenshot_1.png)
+![screenshot_2](/screenshots/screenshot_2.png)
+![screenshot_3](/screenshots/screenshot_3.png)
+
 ## Mozilla's Rhino Compatibility table
 
 Also, Mozilla's [Compatibility table](https://mozilla.github.io/rhino/compat/engines.html) shows which advanced JavaScript features from ES6, and ES2016+ are implemented in Rhino. You can use it for comparison.
