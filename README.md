@@ -9,7 +9,7 @@ Unlike those projects bm_rhino_compat can be used solely to test the ECMAScript 
 ## Installation instructions
 
 1. Upload bm_rhino_compat cartridge to SFCC
-2. Add it to the cartridge path
+2. Add it to the BM cartridge path
 3. Grant permissions for the BM module in Organization context
 4. Open the BM module at Administration > Site Development > Rhino Compat
 
