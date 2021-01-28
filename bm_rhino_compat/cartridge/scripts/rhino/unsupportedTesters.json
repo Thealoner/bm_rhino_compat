@@ -1,0 +1,8 @@
+{
+    "ES2015": {
+        "annex b›RegExp syntax extensions›incomplete patterns and quantifiers": {
+          "spec": "http://www.ecma-international.org/ecma-262/6.0/#sec-regular-expressions-patterns",
+          "code": "return /x{1/.exec(\"x{1\")[0] === \"x{1\"\n  && /x]1/.exec(\"x]1\")[0] === \"x]1\";"
+        }
+    }
+}

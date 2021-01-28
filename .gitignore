@@ -1,0 +1,26 @@
+# general
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.map
+*.zip
+*.code-workspace
+.history
+.idea/
+.vscode/
+.styleguide
+.metadata
+DigitalServer
+RemoteSystemsTempFiles
+
+# unnecessary
+logs/
+types/
+.settings/
+
+# dependencies
+node_modules/
+
+# secrets
+dw.json

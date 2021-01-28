@@ -1,0 +1,74 @@
+<isdecorate template="rhinoCompat/bmPageWrapper">
+
+    <isloop items="${Object.keys(pdict.results)}" var="esVersion">
+        <article id="${esVersion}">
+            <header>
+                <h1><a href="${'#'}${esVersion}">${esVersion} Support</a></h1>
+                <table class="headings">
+                    <tr>
+                        <th class="version">
+                            <div class="details"><small></small>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Successful:
+                                            <isprint value="${pdict.summary[esVersion]._successful}" formatter="#" />
+                                        </td>
+                                        <td>
+                                            Unsuccessful:
+                                            <isprint value="${pdict.summary[esVersion]._unsuccessful}" formatter="#" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div><isprint value="${pdict.summary[esVersion]._percent}" formatter="##.##%"/> complete
+                        </th>
+                    </tr>
+                </table>
+            </header>
+            <isloop items="${Object.keys(pdict.results[esVersion])}" var="category1">
+                <table class="results">
+                    <caption>
+                        <h2 class="category">
+                            <div class="hash" id="ES2015-${category1}"></div><a href="${'#'}ES2015-${category1}">${category1}</a>
+                        </h2>
+                    </caption>
+                    <isloop items="${Object.keys(pdict.results[esVersion][category1])}" var="category2">
+                        <tr>
+                            <td class="feature sub" colspan="25">
+                                <h3>
+                                    <div class="hash" id="ES2015-${category1}-${category2}"></div><a
+                                        href="${'#'}ES2015-${category1}-${category2}">${category2}</a>
+                                </h3>
+                            </td>
+                        </tr>
+                        <isloop items="${Object.keys(pdict.results[esVersion][category1][category2])}" var="category3">
+                            <isset name="testResult" value="${pdict.results[esVersion][category1][category2][category3]}" scope="page" />
+                            <tr>
+                                <td class="feature subsub">
+                                    <div class="hash"
+                                        id="${esVersion}-${category1}-${category2}-${category3}"></div><a
+                                        class="anchor"
+                                        href="${'#'}${esVersion}-${category1}-${category2}-${category3}">§</a><a
+                                        href="${testResult.spec}" target="_blank">
+                                        ${category3}
+                                    </a>
+                                    <div class="info">?
+                                        <div class="fn">
+                                            function(){<div class="code"><isprint value="${testResult.code}" /></div>}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="result">
+                                    <div class="${testResult.result === true ? 'Yes' : 'Error'} result" title="${testResult.result}">
+                                        ${testResult.result}
+                                    </div>
+                                </td>
+                            </tr>
+                        </isloop>
+                    </isloop>
+                </table>
+            </isloop>
+        </article>
+    </isloop>
+
+</isdecorate>
