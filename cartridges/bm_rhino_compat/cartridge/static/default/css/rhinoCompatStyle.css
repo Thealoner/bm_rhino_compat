@@ -334,3 +334,7 @@ table.results {
 tr:hover > td > .anchor {
     visibility: visible;
 }
+.title {
+    font-size: 16px;
+    padding: 5px 0;
+}
