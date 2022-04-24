@@ -19,7 +19,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-header {
+.rhino-header {
     color: #eee;
     /*position: fixed;*/
     width: 100%;
@@ -27,16 +27,16 @@ header {
     top: 0;
     z-index: 1;
 }
-header a {
+.rhino-header a {
     color: #eee;
     text-decoration: underline;
 }
-header.global {
+.rhino-header.global {
     position: sticky;
     position: -webkit-sticky;
     z-index: 10;
 }
-body > header > * {
+body > .rhino-header > * {
     position: absolute;
 }
 #credits {
@@ -111,19 +111,19 @@ body.scrolled .headings {
     right: 340px;
 }
 #flagged:checked ~ article .flagged,
-#flagged:checked ~ header .flagged {
+#flagged:checked ~ .rhino-header .flagged {
     display: block;
 }
 #flagged ~ article .flagged,
-#flagged ~ header .flagged {
+#flagged ~ .rhino-header .flagged {
     display: none;
 }
 #flagged:checked ~ article .unflagged,
-#flagged:checked ~ header .unflagged {
+#flagged:checked ~ .rhino-header .unflagged {
     display: none;
 }
 #flagged ~ article .unflagged,
-#flagged ~ header .unflagged {
+#flagged ~ .rhino-header .unflagged {
     display: block;
 }
 
@@ -160,32 +160,32 @@ label[for="showInfoCode"] {
 article {
     position: relative;
 }
-article > header {
+article > .rhino-header {
     background-color: #b9b9b9;
     position: sticky;
     position: -webkit-sticky;
     height: 44px;
 }
-article.fixed header {
+article.fixed .rhino-header {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
 }
-article > header.previous {
+article > .rhino-header.previous {
     position: absolute;
     top: 100%;
 }
-article > header > h1 {
+article > .rhino-header > h1 {
     margin: 4px 0 0 54px;
     font-weight: normal;
     font-size: 1.5em;
     font-family: monospace;
     display: inline-block;
 }
-article > header > h1 a {
+article > .rhino-header > h1 a {
     text-decoration: none;
 }
-article > header > h1 a:hover {
+article > .rhino-header > h1 a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -333,4 +333,8 @@ table.results {
 }
 tr:hover > td > .anchor {
     visibility: visible;
+}
+.title {
+    font-size: 16px;
+    padding: 5px 0;
 }
