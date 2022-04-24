@@ -7,7 +7,7 @@
 
     <isloop items="${Object.keys(pdict.results)}" var="esVersion">
         <article id="${esVersion}">
-            <header>
+            <header class="rhino-header">
                 <h1><a href="${'#'}${esVersion}">${esVersion} Support</a></h1>
                 <table class="headings">
                     <tr>
